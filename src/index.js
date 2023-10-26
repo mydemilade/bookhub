@@ -8,9 +8,11 @@ import Home from './pages/Home/Home';
 import About from "./pages/About/About";
 import BookList from "./components/BookList/BookList";
 import BookDetails from "./components/BookDetails/BookDetails";
+import { AppProvider } from './context';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
+<AppProvider>
+<BrowserRouter>
   <Routes>
   <Route path = "/" element = {<Home />}>
   <Route path = "about" element = {<About />} />
@@ -19,6 +21,7 @@ root.render(
   </Route>
   </Routes>
   </BrowserRouter>
+</AppProvider>
 );
 
 
